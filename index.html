@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>日历</title>
+  <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="calendar-wrap">
+      <div class="control-wrap">
+        <div class="select-wrap">
+          <select name="select-year" id="select-year">
+            <option value="2018" selected>2018</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+        <label for="select-year">年</label>
+        <div class="select-wrap select-mon-wrap">
+          <select name="select-month" id="select-month">
+            <option value="10" selected>10</option>
+            <option value="11">11</option>
+          </select>
+        </div>
+        <label for="select-month">月</label>
+      </div>
+      <div class="calendar-show">
+        <div class="calender-title-wrap">
+          <div class="pre-month" title="上一个月"><span>&lt;</span></div>
+          <span class="calender-year"><span class="set-year">2018</span>年</span>
+          <span class="calender-month"><span class="set-month">10</span>月</span>
+          <div class="next-month" title="下一个月"><span>&gt;</span></div>
+        </div>
+        <div class="line-wrap">
+          <span class="item">日</span>
+          <span class="item">一</span>
+          <span class="item">二</span>
+          <span class="item">三</span>
+          <span class="item">四</span>
+          <span class="item">五</span>
+          <span class="item">六</span>
+        </div>
+        <div class="calender-content">
+          <div class="line-list-wrap">
+            <span class="item"></span>
+            <span class="item">1</span>
+            <span class="item">2</span>
+            <span class="item">3</span>
+            <span class="item">4</span>
+            <span class="item">5</span>
+            <span class="item">6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/js/index.js"></script>
+</body>
+</html>
