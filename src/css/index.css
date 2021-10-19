@@ -71,6 +71,23 @@ body {
   text-align: center;
 }
 
+.calendar-show .line-list-wrap .item.active {
+  z-index: 0;
+  position: relative;
+  color: #fff;
+}
+.calendar-show .line-list-wrap .item.active::before {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4a9cfa;
+}
+
 .calendar-wrap .calendar-show .calender-title-wrap {
   position: relative;
   width: 100%;

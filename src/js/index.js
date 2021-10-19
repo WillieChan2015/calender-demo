@@ -189,8 +189,11 @@ function setCalender(date) {
   if (!(date instanceof Calender)) {
     throw new Error("The parameter of date must be an instance of Calender!");
   }
+
   let count = 0;
   let days = date.getAlldays();
+  const now = new Date();
+  const isCurrentMonth = date.getYear() === now.getFullYear() && date.getMonth() === now.getMonth() + 1;
   let calenderDiv = '<div class="line-list-wrap">';
   for (let i = 0; i < date.getFirstDayOfWeek(); i++) {
     calenderDiv += '<span class="item"></span>';
@@ -206,7 +209,7 @@ function setCalender(date) {
     if (weedDayCount === 0) {
       calenderDiv += '<div class="line-list-wrap">';
     }
-    calenderDiv += `<span class="item">${count + 1}</span>`;
+    calenderDiv += `<span class="item ${isCurrentMonth && now.getDate() === count + 1 ? 'active' : ''}">${count + 1}</span>`;
     weedDayCount += 1;
     if (weedDayCount === 7) {
       calenderDiv += '</div>';
